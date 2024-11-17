@@ -5,11 +5,13 @@ def load_data():
     with open("astronomy_data.json", "r", encoding="utf-8") as file:
         return json.load(file)
 
+# Двухмерный список с данными, где:
+# 0 — ключевое слово, 1 — описание
 data = load_data()
 
 while True:
     query = input("Введите запрос: ").strip().lower()
-    if query.lower() == 'exit' or query.lower() == 'выход':  # Прекращение работы цикла
+    if query == 'exit' or query == 'выход':  # Прекращение работы цикла
         print("Выход из программы.")
         break
 
